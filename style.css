@@ -204,22 +204,22 @@ span{
 }
 .text-animation span::before{
     content: "web Developer";
-    color: var(--main-color);
+    color: red;
     animation: words 20s infinite;
 }
 .text-animation span::after{
     content: "";
-    background-color: var(--main-color);
+    background-color: black;
     position: absolute;
-    width: calc(100% +8px);
+    width: calc(100% + 8px);
     height: 100%;
-    border-right: 3px solid var(--bg-color);
+    border-right: 3px solid black;
     right: -8px;
-    animation: cursor 0.6s infinite,typing 20s steps(14) infinite;
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
 }
 @keyframes cursor{
     to{
-        border-right: 2px solid var(--main-color);
+        border-right: 3px solid black;
     }
 }
 @keyframes words{
@@ -233,11 +233,11 @@ span{
     }
     41%,
     60%{
-        content: "Web Devepment";
+        content: "Web Developer";
     }
     61%,
     80%{
-        content: "Software Devepment";
+        content: "Software Developer";
     }
 }
 @keyframes typing{
@@ -358,4 +358,52 @@ span{
 ::-webkit-scrollbar-track{
     background-color: var(--bg-color);
     width: 50px;
+}
+.services{
+    background-color: var(--bg-color);
+    color: black;
+}
+.services h2{
+    margin-bottom: 5rem;
+    color: #fff;
+}
+.services-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+.service-box{
+    background-color: cyan;
+    color: black;
+    height: 300px;
+    border-radius: 3rem;
+    border: 5px solid transparent;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+.service-box:hover{
+    background-color:blue;
+    color: red;
+    transform: scale(1.03);
+}
+.service-box .service-info{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-height: 200px;
+    justify-content: baseline;
+    padding: 5rem 5rem;
+}
+.service-info h4{
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 2;
+}
+.service-info p{
+    font-size: 1.6rem;
+    font-weight: 600;
+    max-height: 100px;
+    line-height: 1.7;
+    margin: auto;
 }
