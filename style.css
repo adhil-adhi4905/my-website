@@ -16,7 +16,7 @@ body{
     width: 100%;
     height: 100vh;
     overflow-x: hidden;
-    background-color: black;
+    background-color:black;
     color: #fff;
 }
 header{
@@ -39,10 +39,14 @@ header{
     font-weight: 800;
     cursor: pointer;
     transition: 0.5s ease;
+    text-decoration: none;
 }
 .logo:hover{
     transform: scale(1.1);
     color: red;
+}
+.logo span{
+    text-shadow: 0 0 25px blue;
 }
 .navbar a{
     font-size: 1.8rem;
@@ -51,49 +55,21 @@ header{
     font-weight: 500;
     transition: 0.3 ease;
     border-bottom: 3px solid transparent;
+    text-decoration: none;
 }
 nav a:hover,
 nav a.active{
     color: red;
     border-bottom: 3px solid red;
 }
-.menu-icon{
-    font-size: 3.6rem;
-    color: #fff;
+.hamburger {
     display: none;
-}
-
-@media(max-width:995px) {
-    nav{
-        position: absolute;
-        display: none;
-        top: 0;
-        right: 0;
-        width: 40%;
-        border-left: 3px solid red;
-        border-bottom: 3px solid red;
-        border-bottom-left-radius: 2rem;
-        padding: 1rem;
-        background-color: black;
-        border-top: 0.1 solid rgba(0, 0, 0, 0.1);
-    }
-    nav.active{
-        display: block;
-    }
-    nav a{
-        display: block;
-        font-size: 2rem;
-        margin: 3rem;  
-    }
-    nav a:hover
-    nav a.active{
-        padding: 1rem;
-        border-radius: 0.5rem;
-        border-bottom: 0.5rem solid red;
-        
-    }
-    
-}
+    font-size: 24px;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
 section{
     min-height: 100vh;
     padding: 5rem 9% 5rem;
@@ -112,7 +88,7 @@ section{
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 span{
-    color: red;
+    color: cyan;
 
 }
 .home-content p{
@@ -150,6 +126,7 @@ span{
     margin: 3rem 1.5rem 48px 0;
     transition: 0.3s ease;
     color: red;
+    text-decoration: none;
 }
 .socail-icons a:hover{
     color: black;
@@ -376,15 +353,15 @@ span{
 .service-box{
     background-color: cyan;
     color: black;
-    height: 300px;
+    height: 375px;
     border-radius: 3rem;
     border: 5px solid transparent;
     cursor: pointer;
     transition: 0.4s ease-in-out;
 }
 .service-box:hover{
-    background-color:blue;
-    color: red;
+    background-color:#fff;
+    color: blue;
     transform: scale(1.03);
 }
 .service-box .service-info{
@@ -393,7 +370,7 @@ span{
     text-align: left;
     max-height: 200px;
     justify-content: baseline;
-    padding: 5rem 5rem;
+    padding: 5rem 8rem;
 }
 .service-info h4{
     font-size: 3rem;
@@ -521,6 +498,7 @@ span{
     border-radius: 50%;
     margin: 0 10px;
     transition: 0.3s ease-in-out;
+    text-decoration: none;
 }
 .footer .social a:hover{
     transform: scale(1.2) translateY(-10px);
@@ -540,6 +518,7 @@ span{
     color: #fff;
     border-bottom: 3px solid transparent;
     transition: 0.3 ease-in-out;
+    text-decoration: none;
 }
 .footer ul li a:hover{
     border-bottom: 3px solid cyan;
@@ -555,3 +534,106 @@ span{
     font-size: 16px;
     color: #fff;
 }
+@media(max-width:1285px){
+    html{
+        font-size: 55%;
+    }
+}
+@media(max-width:991px){
+    header{
+        padding: 2rem 3%;
+    }
+    section{
+        padding: 10rem 3% 2rem;
+    }
+    .timeline-items::before{
+        left: 7px;
+    }
+    .timeline-item:nth-child(odd){
+        padding-right: 0;
+        text-align: left;
+    }
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even){
+        padding-left: 37px;
+    }
+    .timeline-dot{
+        left: 0;
+    }
+    .services{
+        padding-bottom: 7rem;
+    }
+    .Experiences .wrapper{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .services-container{
+        padding-bottom: 10rem;
+        grid-template-columns: repeat(1,5fr);
+        margin: 0 5rem;
+    }
+    .contact form{
+        flex-direction: column;
+    }
+    .footer{
+        padding: 2rem 3%;
+    }
+}
+
+@media (max-width:768px) {
+    .hamburger {
+        display: block;
+      }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 50%;
+        padding: 1rem 3%;
+        background-color: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(20px);
+        border-bottom-left-radius: 2rem;
+        border-left: 2px solid red;
+        border-bottom:  2px solid green;
+        display: none;
+        flex-direction: column;
+        float: none;
+    }
+    .navbar .active{
+        display: block;
+    }
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        color: #fff;
+    }
+    .home{
+        flex-direction: column-reverse;
+        margin: 5rem 4rem;
+        display: block;
+    }
+    .home-content h3{
+        font-size: 2.6rem;
+    }
+    .home-content h1{
+        font-size: 8rem;
+        margin-top: 3rem;
+    }
+    .home-content p{
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .home-img img{
+        width: 56vw;
+    }
+    .services h2{
+        margin-bottom: 3rem;
+    }
+    .services-container{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .service-box .service-info{
+        padding: 0%;
+    }
+}
+
