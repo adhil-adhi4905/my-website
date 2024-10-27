@@ -62,14 +62,6 @@ nav a.active{
     color: red;
     border-bottom: 3px solid red;
 }
-.hamburger {
-    display: none;
-    font-size: 24px;
-    color: #fff;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
 section{
     min-height: 100vh;
     padding: 5rem 9% 5rem;
@@ -580,9 +572,6 @@ span{
 }
 
 @media (max-width:768px) {
-    .hamburger {
-        display: block;
-      }
     .navbar{
         position: absolute;
         top: 100%;
